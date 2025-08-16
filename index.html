@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folder Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url(./IMAGE/BACKGROUND.jpg) no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* 🔵 Header Style */
+    .header {
+      width: 100%;
+      background: rgba(0, 123, 255, 0.9);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 28px;
+      font-weight: bold;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .folders {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .folder {
+      width: 140px;
+      height: 140px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: popUp 0.6s ease;
+      text-decoration: none; /* remove underline from links */
+    }
+
+    .folder:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+    }
+
+    .folder img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .folder span {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    @keyframes popUp {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔵 Animated Header -->
+  <div class="header">
+    CGD 200: ARCHIE'S ASSIGNMENT
+  </div>
+
+  <div class="container">
+    <h1>Select ASSIGNMENT FOLDER </h1>
+    <div class="folders">
+
+      <!-- ✅ Assignment 1 -->
+      <a href="./ASSIGNMENT_1/index.html" class="folder">
+        <img src="./IMAGE/PLACE.jpg" alt="Folder 1">
+        <span>PLACES</span>
+      </a>
+
+      <!-- ✅ Assignment 2 -->
+      <a href="./ASSIGNMENT_2/index.html" class="folder">
+        <img src="./IMAGE/MOVIES.jpg" alt="Folder 2">
+        <span>SHOWS</span>
+      </a>
+
+      <!-- ✅ Assignment 3 -->
+      <a href="./ASSIGNMENT_3/index.html" class="folder">
+        <img src="https://img.icons8.com/color/96/000000/folder.png" alt="Folder 3">
+        <span>ARTWORK</span>
+      </a>
+
+    </div>
+  </div
